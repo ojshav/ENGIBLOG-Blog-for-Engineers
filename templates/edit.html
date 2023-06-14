@@ -1,0 +1,89 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Panel</h1>
+            <span class="subheading">Manage your blogs and change them</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+      
+        
+        <h1>Add/Edit Post</h1>
+        <h1>Basic Actions</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th><a href="/dashboard"><button class="btn btn-primary float-right"> Dashboard</a></button></th>
+                <th><a href="/logout"><button class="btn btn-primary float-right"> logout</a></button></th>
+                
+              </tr>
+            </thead>
+            </table>
+        <!-- Pager -->
+        <form name="sentMessage" id="contactForm" action="/edit/{{sno}}" method="post" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Title</label>
+                <input type="text" name="title" class="form-control"value = "{{post.title}}" placeholder="Title" id="title" required data-validation-required-message="Blog Title.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Sub_heading</label>
+                <input type="text" name="Sub_heading" class="form-control"value = "{{post.sub_heading}}" placeholder="Sub_heading" id="subheading" required data-validation-required-message="Blog Sub heading.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>slug</label>
+                <input type="text" name="slug" class="form-control" value = "{{post.slug}}"placeholder="slug" id="slug" required data-validation-required-message="Blog slug.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>author</label>
+                <input type="text" name="author" class="form-control" value = "{{post.author}}"placeholder="author" id="author" required data-validation-required-message="Written_by.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Content</label>
+                <textarea rows="5" name="content" class="form-control" placeholder = "Content" id="message" required data-validation-required-message="   Blog Content.">{{post.content}}</textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">submit</button>
+          </form>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+{% include "footer.html" %}

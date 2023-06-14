@@ -1,0 +1,16 @@
+{
+    "params":{
+        "local_server" : "True",
+        "local_uri": "mysql://root:@localhost/engineersblog",
+        "prod_uri": "mysql://root:@localhost/engineersblog",
+        "fb_url": "https://facebook.com/engineersblog",
+        "tw_url": "https://twitter.com/engineersblog",
+        "gt_url": "https://github.com/engineersblog",
+        "blog_name": "The Engineer's Blog",
+        "admin_user": "Ojshav@gmail.com",
+        "admin_password": "ojshavaiml@2k25",
+        "no_of_posts": 2,
+        "upload_location": "D:\\coding\\python projects\\Blog Website"
+
+    }
+}
